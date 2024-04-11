@@ -73,9 +73,8 @@ public class Main {
                     }
                     break;
                 case 9:
-                    break;
+                    koniec = true;
             }
-            koniec = true;
         }
     }
 }

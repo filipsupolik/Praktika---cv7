@@ -13,13 +13,17 @@ public class Firma {
 
 
     public boolean pridajZamestnanca(Zamestnanec zam) {
+        if (this.zoznamZamestnancov.isEmpty()) {
+            this.zoznamZamestnancov.add(zam);
+            return true;
+        }
+
         for (Zamestnanec zamestnanec : this.zoznamZamestnancov) {
             if (!zam.getRodneCislo().equals(zamestnanec.getRodneCislo())) {
                 this.zoznamZamestnancov.add(zam);
                 return true;
-            } else if (this.zoznamZamestnancov.isEmpty()) {
-                this.zoznamZamestnancov.add(zam);
-                return true;
+            } else {
+                System.out.println("Zamestnanec s tymto rodnym cislom existuje");
             }
         }
         return false;
@@ -32,7 +36,7 @@ public class Firma {
     }
 
     public void vypisVsetko() {
-        System.out.printf(this.nazov);
+        System.out.println(this.nazov);
         this.vypisZamestnancov();
     }
 
