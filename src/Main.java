@@ -16,7 +16,7 @@ public class Main {
             System.out.println("[5] Najvyssi plat");
             System.out.println("[6] Zamestnanec s najvyssim platom");
             System.out.println("[7] Zamestnanci s nadpriemernym platom");
-            System.out.println("[8] Zamestnanci s daneho roku");
+            System.out.println("[8] Zamestnanci z daneho roku");
             System.out.println("[9] ukonci");
             int cisloPrikazu = sc.nextInt();
             switch (cisloPrikazu) {
